@@ -1,4 +1,4 @@
-#!/uzer/bin/env bash
+#!/user/bin/env bash
 
 bind-key C-a switch-client -T RESIZE
 
