@@ -3,52 +3,51 @@
 bind-key C-a switch-client -T RESIZE
 
 # Resize panes
-bind-key -rT RESIZE h resize-pane -L 2
-bind-key -rT RESIZE l resize-pane -R 2
-bind-key -rT RESIZE k resize-pane -U 2
-bind-key -rT RESIZE j resize-pane -D 2
-bind-key -rT RESIZE H resize-pane -L 5
-bind-key -rT RESIZE L resize-pane -R 5
-bind-key -rT RESIZE K resize-pane -U 5
-bind-key -rT RESIZE J resize-pane -D 5
-bind-key -rT RESIZE s switch-client -T SWAP
-bind-key -rT RESIZE m switch-client -T MOVE
-bind-key -rT RESIZE f switch-client -T FOCUS
-bind-key -rT RESIZE r switch-client -T RESIZE
+bind-key -T RESIZE h resize-pane -L 2 \; switch-client -T RESIZE h
+bind-key -T RESIZE l resize-pane -R 2 \; switch-client -T RESIZE l
+bind-key -T RESIZE k resize-pane -U 2 \; switch-client -T RESIZE k
+bind-key -T RESIZE j resize-pane -D 2 \; switch-client -T RESIZE j
+bind-key -T RESIZE H resize-pane -L 5 \; switch-client -T RESIZE H
+bind-key -T RESIZE L resize-pane -R 5 \; switch-client -T RESIZE L
+bind-key -T RESIZE K resize-pane -U 5 \; switch-client -T RESIZE K
+bind-key -T RESIZE J resize-pane -D 5 \; switch-client -T RESIZE J
+bind-key -T RESIZE s switch-client -T SWAP
+bind-key -T RESIZE m switch-client -T MOVE
+bind-key -T RESIZE f switch-client -T FOCUS
+bind-key -T RESIZE r switch-client -T RESIZE
 
 # Swap panes
-bind-key -rT SWAP h swap-pane -s '{left}'
-bind-key -rT SWAP l swap-pane -s '{right}'
-bind-key -rT SWAP j swap-pane -s '{down-of}'
-bind-key -rT SWAP k swap-pane -s '{up-of}'
-bind-key -rT SWAP space next-layout
-bind-key -rT SWAP s switch-client -T SWAP
-bind-key -rT SWAP m switch-client -T MOVE
-bind-key -rT SWAP f switch-client -T FOCUS
-bind-key -rT SWAP r switch-client -T RESIZE
+bind-key -T SWAP j swap-pane -s '{down-of}' \; switch-client -T SWAP
+bind-key -T SWAP h swap-pane -s '{left}' \; switch-client -T SWAP
+bind-key -T SWAP l swap-pane -s '{right}' \; switch-client -T SWAP
+bind-key -T SWAP k swap-pane -s '{up-of}' \; switch-client -T SWAP
+bind-key -T SWAP space next-layout \; switch-client -T SWAP
+bind-key -T SWAP s switch-client -T SWAP
+bind-key -T SWAP m switch-client -T MOVE
+bind-key -T SWAP f switch-client -T FOCUS
+bind-key -T SWAP r switch-client -T RESIZE
 
 # Move panes
-bind-key -rT MOVE h move-pane -t '{left-of}'
-bind-key -rT MOVE l move-pane -t '{right-of}'
-bind-key -rT MOVE j move-pane -t '{down-of}'
-bind-key -rT MOVE k move-pane -t '{up-of}'
-bind-key -rT MOVE space next-layout
-bind-key -rT MOVE s switch-client -T SWAP
-bind-key -rT MOVE m switch-client -T MOVE
-bind-key -rT MOVE f switch-client -T FOCUS
-bind-key -rT MOVE r switch-client -T RESIZE
+bind-key -T MOVE l move-pane -t '{right-of}' \; switch-client -T MOVE
+bind-key -T MOVE h move-pane -t '{left-of}'\; switch-client -T MOVE
+bind-key -T MOVE j move-pane -t '{down-of}'\; switch-client -T MOVE
+bind-key -T MOVE k move-pane -t '{up-of}' \; switch-client -T MOVE
+bind-key -T MOVE space next-layout
+bind-key -T MOVE s switch-client -T SWAP
+bind-key -T MOVE m switch-client -T MOVE
+bind-key -T MOVE f switch-client -T FOCUS
+bind-key -T MOVE r switch-client -T RESIZE
 
 # Focus panes
 # This isn't super useful for changing focus since there are too many keys to
 # press. It's only useful if you are in e.g. resize mode and want to resize
 # another pane or move another pane, then it's useful to press f, go to that
 # pane, and then resize/move it.
-bind-key -rT FOCUS h select-pane -L
-bind-key -rT FOCUS l select-pane -R
-bind-key -rT FOCUS j select-pane -D
-bind-key -rT FOCUS k select-pane -U
-bind-key -rT FOCUS s switch-client -T SWAP
-bind-key -rT FOCUS m switch-client -T MOVE
-bind-key -rT FOCUS f switch-client -T FOCUS
-bind-key -rT FOCUS r switch-client -T RESIZE
-
+bind-key -T FOCUS h select-pane -L \; switch-client -T FOCUS
+bind-key -T FOCUS l select-pane -R \; switch-client -T FOCUS
+bind-key -T FOCUS j select-pane -D \; switch-client -T FOCUS
+bind-key -T FOCUS k select-pane -U \; switch-client -T FOCUS
+bind-key -T FOCUS s switch-client -T SWAP
+bind-key -T FOCUS m switch-client -T MOVE
+bind-key -T FOCUS f switch-client -T FOCUS
+bind-key -T FOCUS r switch-client -T RESIZE
