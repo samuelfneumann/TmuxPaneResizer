@@ -3,14 +3,14 @@
 bind-key C-a switch-client -T RESIZE
 
 # Resize panes
-bind-key -T RESIZE h resize-pane -L 2 \; switch-client -T RESIZE h
-bind-key -T RESIZE l resize-pane -R 2 \; switch-client -T RESIZE l
-bind-key -T RESIZE k resize-pane -U 2 \; switch-client -T RESIZE k
-bind-key -T RESIZE j resize-pane -D 2 \; switch-client -T RESIZE j
-bind-key -T RESIZE H resize-pane -L 5 \; switch-client -T RESIZE H
-bind-key -T RESIZE L resize-pane -R 5 \; switch-client -T RESIZE L
-bind-key -T RESIZE K resize-pane -U 5 \; switch-client -T RESIZE K
-bind-key -T RESIZE J resize-pane -D 5 \; switch-client -T RESIZE J
+bind-key -T RESIZE h resize-pane -L 2 \; switch-client -T RESIZE
+bind-key -T RESIZE l resize-pane -R 2 \; switch-client -T RESIZE
+bind-key -T RESIZE k resize-pane -U 2 \; switch-client -T RESIZE
+bind-key -T RESIZE j resize-pane -D 2 \; switch-client -T RESIZE
+bind-key -T RESIZE H resize-pane -L 5 \; switch-client -T RESIZE
+bind-key -T RESIZE L resize-pane -R 5 \; switch-client -T RESIZE
+bind-key -T RESIZE K resize-pane -U 5 \; switch-client -T RESIZE
+bind-key -T RESIZE J resize-pane -D 5 \; switch-client -T RESIZE
 bind-key -T RESIZE s switch-client -T SWAP
 bind-key -T RESIZE m switch-client -T MOVE
 bind-key -T RESIZE f switch-client -T FOCUS
